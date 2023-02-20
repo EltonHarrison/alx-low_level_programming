@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-/**						
- * main- main function
+/**
+ * main- main function 
  *
  * Return: always 0 
  */
@@ -22,7 +22,7 @@ int main(void)
 				if (i + j != 17)
 				{
 					putchar('i');
-					putchar(' ')
+					putchar(' ');
 			        }
 			}
 		}
