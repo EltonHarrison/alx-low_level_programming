@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - main function
+ * main- main function
  *
  * Return: always 0
  */
@@ -15,5 +15,5 @@ int main(void)
 		putchar(i + '0');
 	for (j = 'a' ; j <= 'f' ; j++)
 		putchar(j);
-	putchar("\n");
+	putchar('\n');
 	return (0);
