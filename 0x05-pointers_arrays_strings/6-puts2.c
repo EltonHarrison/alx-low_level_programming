@@ -1,8 +1,9 @@
 #include "main.h"
+
 /**
- * puts2 - print string
- * @str :function parameters
- * Return: 0
+ * puts2 - function to print other characters
+ * @str: function parameter
+ * Return: always 0
  */
 
 void puts2(char *str)
@@ -13,10 +14,8 @@ void puts2(char *str)
 	{
 		_putchar(str[i]);
 		i++;
-	}	
+	}
 	_putchar('\n');
-
-
 }
 
 
