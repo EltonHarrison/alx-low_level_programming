@@ -1,24 +1,46 @@
-#include <ctype.h>
-#include <string.h>
+#include "main.h"
 
 /**
- * cap_string - Capitalizes the first letter of each word in a string.
- * @str: The string to modify.
- */
-char *cap_string(char *);
+ * cap_string - a function that capitalizes
+ *              all words of a string
+ *
+ * @s: pointer to char input array
+ *
+ * Return: @s
+*/
+
+char *cap_string(char *s)
 {
-	int i;
-	int len = strlen(str);
+	int i = 0;
 
-    /* Capitalize first letter of string */
-	if (len > 0)
-		str[0] = toupper(str[0]);
-
-    /* Capitalize first letter of each word */
-	for (i = 1; i < len; i++)
+	/*iterate through our array values*/
+	while (s[i] != '\0')
 	{
-	if (isspace(str[i - 1]) && isalpha(str[i]))
-		str[i] = toupper(str[i]);
+		/*check for any lowercase letters*/
+		if (s[i] >= 97 && s[i] <= 122)
+		{
+			/**
+			 * if we have a null character
+			 * change its value to capital
+			*/
+			if (i == 0)
+			{
+				s[i] -= 32;
+			}
+			/**
+			 * if we find any character matching the below before any small
+			 * letter we change that value to a capital letter.
+			*/
+			if (s[i - 1] == 32 || s[i - 1] == 9 || s[i - 1] == 10 ||
+				s[i - 1] == 44 || s[i - 1] == 59 || s[i - 1] == 46 ||
+				s[i - 1] == 33 || s[i - 1] == 63 || s[i - 1] == 34 ||
+				s[i - 1] == 40 || s[i - 1] == 41 || s[i - 1] == 123 ||
+				s[i - 1] == 124)
+			{
+				s[i] -= 32;
+			}
+		}
+		i++;
 	}
+	return (s);
 }
-
