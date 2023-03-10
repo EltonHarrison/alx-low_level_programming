@@ -1,1 +1,1 @@
-a directory that contains all files forthis project
+directory contains all project for argc,argv project
